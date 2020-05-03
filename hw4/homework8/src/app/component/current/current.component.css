@@ -1,0 +1,151 @@
+#current{
+    position: relative;
+    color: black;
+}
+#currentCity{
+    font-size: 40px;
+    position: relative;
+    left: 5%;
+    margin-top:10px;
+}
+#currentZone{
+    font-size: 40px;
+    color: rgb(65, 65, 65);
+    position: relative;
+    left: 5%;
+    margin-top:10px;
+}
+#currentTem{
+    font-size: 40px;
+    position: relative;
+    left: 5%;
+    margin-top:15px;
+}
+#currentTemSign{
+    margin-left: 5px;
+    margin-top: -40px;
+}
+#currentF{
+    margin-left: 5px;
+
+}
+#currentSummary{
+    font-size: 32px;
+    position: relative;
+    left: 5%;
+    margin-top:10px;
+}
+#currentSeal{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+#sealImg{
+    width: 200px;
+}
+#currentIcons{
+    margin-top: 30px;
+}
+.img1{
+    text-align: center;
+}
+.img1 img{
+    width: 30px;
+    height: 30px;  
+}
+.text1{
+    font-size: 22px;
+    text-align: center;
+}
+
+
+
+@media (max-width:800px){
+    #currentCity{
+        font-size: 30px;
+    }
+    #currentZone{
+        font-size: 30px;
+    }
+    #currentTem{
+        font-size: 30px;
+    }
+    #currentSummary{
+        font-size: 22px;
+        margin-top:20px;
+    }
+    #currentSeal{
+        position: absolute;
+        right: 10%;
+        top: 18%;
+    }
+    #sealImg{
+        width: 180px;
+    }
+    #currentIcons{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width:600px){
+    #currentCity{
+        font-size: 22px;
+    }
+    #currentZone{
+        font-size: 22px;
+    }
+    #currentTem{
+        font-size: 22px;
+    }
+    #currentSummary{
+        font-size: 20px;
+        margin-top:30px;
+    }
+    #currentSeal{
+        position: absolute;
+        right: 10%;
+        top: 20%;
+    }
+    #sealImg{
+        width: 145px;
+    }
+    #currentIcons{
+        margin-top: 100px;
+    }
+
+}
+
+@media (max-width:400px){
+    #currentCity{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #currentZone{
+        font-size: 18px;
+    }
+    #currentTem{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top:25px;
+    }
+    #currentSummary{
+        font-size: 18px;
+        margin-top:40px;
+        font-weight: bold;
+    }
+    #currentSeal{
+        position: absolute;
+        right: 10%;
+        top: 20%;
+    }
+    #sealImg{
+        width: 120px;
+    }
+    .text1{
+        font-size: 16px;
+    }
+    #currentIcons{
+        margin-top: 120px;
+    }
+
+}

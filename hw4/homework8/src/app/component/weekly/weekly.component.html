@@ -1,0 +1,64 @@
+<div id="hourly" class="card mb-3" style="margin:20px auto 0; width: 100%; max-width: 900px;border: none;">
+  <div class="weeklyCharts" id="weeklyTemperature" style="display: block">
+    <canvas baseChart
+            [datasets]="weeklyData"
+            [labels]="weeklyLabels"
+            [options]="weeklyOptions"
+            [legend]="weeklyLegend"
+            [chartType]="weeklyType"
+            style="border: none;"
+            (chartClick)="onChartClick($event)"
+            >
+    </canvas>
+  </div>
+
+
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(90,135,163);">
+       <div class="col-sm-3" id="modeDate">{{modeDate}}</div>
+       <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body" style="background-color: rgb(145,203,239);">
+        <div id="upPart">
+          <div id="modeCity">{{modeCity}}</div>
+          <div id="modeTemperature">
+            <span>{{modeTemperature}}</span>
+            <span><img style="width: 14px;" src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png"></span>
+            <span>F</span>
+          </div>
+          <div id="modeSummary">{{modeSummary}}</div>
+          <div id="modeIcon"><img style="width: 60px;" src="{{modeIcon}}"></div>
+        </div>
+        <div id="downPart">
+          <div id="modePreciption">
+            <span>Preciption : </span>
+            <span>{{modePrecipitation}}</span>
+          </div>
+          <div id="modeRain">
+            <span>Chance of Rain : </span>
+            <span>{{modeRain}}</span>
+            <span> %</span>
+          </div>
+          <div id="modeWind">
+            <span>Wind Speed : </span>
+            <span>{{modeWind}}</span>
+            <span> mph</span>
+          </div>
+          <div id="modeHumidity">
+            <span>Humidity : </span>
+            <span>{{modeHumidity}}</span>
+            <span> %</span>
+          </div>
+          <div id="modeVisibility">
+            <span>Visibility : </span>
+            <span>{{modeVisibility}}</span>
+            <span> miles</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal !-->

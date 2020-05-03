@@ -1,0 +1,33 @@
+<div class="progress" id="progressBar" *ngIf="showResult && !testRecord">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+</div>
+<div class="alert alert-warning" role="alert" *ngIf="testRecord">
+    No record.
+</div>
+<div id="myNav" class="card text-white mb-3" style="margin:20px auto 0; width: 100%; max-width: 1100px; border: none;" style="border:none" *ngIf="!noRecord && !testRecord">
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="showCurrent" routerLink="/Current" (click)="showCurrent()" style="color: black;">Current</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="showHourly" routerLink="/Hourly" (click)="showHourly()" style="color: black;">Hourly</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="showWeekly" routerLink="Weekly" (click)="showWeekly()" style="color: black;">Weekly</a>
+    </li>
+
+    <li class="nav-item ml-auto">
+      <a class="nav-link twitter-share-button" [href]="twitterUrl" target="_blank" style="padding:0;margin: 0;"><img src="http://csci571.com/hw/hw8/Images/Twitter.png" style="width: 36px; "></a>
+    </li>
+    <li class="nav-item" style="margin-left: 20px;">
+      <button class="btn btn-light" (click)="setFavorite()">
+        <i class="material-icons align-middle" [style.color]="cartColor">{{star}}</i>
+      </button>
+    </li>
+  </ul>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- //(click)="showHourly()" href="#" -->

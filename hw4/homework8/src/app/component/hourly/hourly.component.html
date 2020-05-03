@@ -1,0 +1,90 @@
+<div class="col-sm-3" style="margin-top: 20px;">
+    <select class="custom-select" id="hourlySelect" name="hourlySelect" (change)="onChange($event.target.value)">
+      <option *ngFor="let item of hourlyItems; let i=index" [value]="i">
+        {{item.name}}
+      </option>
+      <!-- <option value="Temperature" selected>Temperature</option>
+      <option value="Pressure">Pressure</option>
+      <option value="Humidity">Humidity</option>
+      <option value="Ozone">Ozone</option>
+      <option value="Visibility">Visibility</option>
+      <option value="WindSpeed">Wind Speed</option> -->
+    </select>
+</div>
+
+<div id="hourly" class="card mb-3" style="margin:0 auto; width: 100%; max-width: 900px;border: none;">
+  <!-- temperature -->
+  <div class="hourlyCharts" id="hourlyTemperature" style="display: block">
+    <canvas baseChart
+            [datasets]="temperatureData"
+            [labels]="temperatureLabels"
+            [options]="temperatureOptions"
+            [legend]="temperatureLegend"
+            [chartType]="temperatureType"
+            style="border: none;">
+    </canvas>
+  </div>
+
+  <!-- pressure -->
+  <div class="hourlyCharts" id="hourlyPressure" style="display: none">
+      <canvas baseChart
+              [datasets]="pressureData"
+              [labels]="pressureLabels"
+              [options]="pressureOptions"
+              [legend]="pressureLegend"
+              [chartType]="pressureType"
+              style="border: none;">
+      </canvas>
+  </div>
+
+  <!-- humidity -->
+  <div class="hourlyCharts" id="hourlyHumidity" style="display: none">
+      <canvas baseChart
+              [datasets]="humidityData"
+              [labels]="humidityLabels"
+              [options]="humidityOptions"
+              [legend]="humidityLegend"
+              [chartType]="humidityType"
+              style="border: none;">
+      </canvas>
+  </div>
+
+  <!-- ozone -->
+  <div class="hourlyCharts" id="hourlyOzone" style="display: none">
+      <canvas baseChart
+              [datasets]="ozoneData"
+              [labels]="ozoneLabels"
+              [options]="ozoneOptions"
+              [legend]="ozoneLegend"
+              [chartType]="ozoneType"
+              style="border: none;">
+      </canvas>
+  </div>
+
+  <!-- visibility -->
+  <div class="hourlyCharts" id="hourlyVisibility" style="display: none">
+      <canvas baseChart
+              [datasets]="visibilityData"
+              [labels]="visibilityLabels"
+              [options]="visibilityOptions"
+              [legend]="visibilityLegend"
+              [chartType]="visibilityType"
+              style="border: none;">
+      </canvas>
+  </div>
+
+  <!-- wind -->
+  <div class="hourlyCharts" id="hourlyWind" style="display: none">
+      <canvas baseChart
+              [datasets]="windData"
+              [labels]="windLabels"
+              [options]="windOptions"
+              [legend]="windLegend"
+              [chartType]="windType"
+              style="border: none;">
+      </canvas>
+  </div>
+  
+
+
+</div>

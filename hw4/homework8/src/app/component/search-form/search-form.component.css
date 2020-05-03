@@ -1,0 +1,48 @@
+.required {
+    color: red;
+}
+#result-and-favorite {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#resultButton{
+    border: 1px solid black;
+    background-color: rgb(74, 135, 167);
+}
+#favoriteButton{
+    border: 1px solid black;
+}
+
+@media only screen and (min-width: 1000px) {
+    #label1 {
+      padding-left: 100px;
+
+    }
+    #label2 {
+        padding-left: 100px;
+    }
+    #label3 {
+        padding-left: 100px;
+    } 
+    #label4 {
+        padding-left: 100px;
+    }
+    #btn1 {
+        margin-left: 100px;
+    } 
+    #btn2 {
+        position: relative; 
+        top: -56px; 
+        left: 230px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #btn2 {
+        position: relative; 
+        top: -56px; 
+        left: 130px;
+    }
+  }

@@ -1,0 +1,78 @@
+.backdrop{
+
+    background-color:rgba(0,0,0,0.6);
+    
+    position:fixed;
+    
+    top:0;
+    
+    left:0;
+    
+    width:100%;
+    
+    height:100vh;
+    
+}
+
+*{
+    color: black;
+}
+#modeDate{
+    font-size: 22px;;
+    padding: 0;
+}
+
+#upPart{
+    height: 140px;
+    padding-left: 24px;
+    border-bottom: 1px solid rgba(116, 110, 110, 0.2);
+}
+#modeCity{
+    font-size:24px
+}
+#modeTemperature{
+    font-size: 36px;
+    margin-top: 5px;
+}
+#modeTemperature span{
+    margin-right: 5px;
+}
+#modeTemperature img{
+    vertical-align: top;
+}
+#modeSummary{
+    margin-top: 5px;
+}
+#modeIcon{
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+
+#downPart{
+    height: 140px;
+    padding: 24px;
+    float: right;
+}
+/* #modePreciption{
+    float: right;
+} */
+/* #modeRain{
+    float: right;
+}
+#modeWind{
+    float: right;
+}
+#modeHumidity{
+    float: right;
+}
+#modeVisibility{
+    float: right;
+} */
+@media (max-width:600px){
+    #downPart{
+        height: 140px;
+        padding: 24px;
+        float: none;
+    }
+}

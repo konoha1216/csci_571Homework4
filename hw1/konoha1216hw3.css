@@ -1,0 +1,318 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  color: gray;
+  background-color: white;
+  width: 761px;
+  height:53px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+.header .migi{
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgb(69,51,140);
+  float: left;
+  margin: 21px 0px 0px 99px;
+}
+.header .items{
+  float:right;
+  padding: 0 100px 0 0;
+}
+.items ul li{
+  list-style-type: none;
+  float: left;
+  font-size: 9.5px;
+  font-family: 'Lato', sans-serif;
+  color: rgb(170,170,170);
+  margin: 23px 20px 0px 0px;
+}
+.items ul li a:link{
+  text-decoration: none;
+  color: rgb(170,170,170);
+}
+.items ul li a .link1:visited{
+  color: rgb(79,60,139);
+}
+.items ul li a .link2:visited{
+  color: rgb(79,60,139);
+}
+.items ul li a .link3:visited{
+  color: rgb(79,60,139);
+}
+.items ul li a .link4:visited{
+  color: rgb(79,60,139);
+}
+
+  .container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    margin: 0 auto;
+    width: 761px;
+  }
+
+  .group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .layer-base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 2;
+  }
+
+  .layer-deep{
+    -webkit-transform: translateZ(-150px) scale(1.5);
+    transform: translateZ(-150px) scale(1.5);
+    z-index: 1;
+  }
+  .layer-back {
+    -webkit-transform: translateZ(-900px) scale(4);
+    transform: translateZ(-900px) scale(4);
+    z-index: 1;
+  }
+
+.background1{
+  background:url(http://csci571.com/hw/hw3/images/coffee2.jpg) no-repeat -234px -22px;
+  background-size: 162%;
+  width: 761px;
+  height: 528px;
+  margin: -225px auto;
+  padding-top: 53px;
+}
+.background2{
+  background: url(http://csci571.com/hw/hw3/images/coffee1.jpg) no-repeat -300px -120px;
+  background-size:180%;
+  width: 761px;
+  height: 545px;
+  margin: 280px auto;
+}
+.food{
+  width: 372px;
+  height: 200px;
+  background-color: white;
+  float: left;
+  margin: 216px 195px 90px 195px;
+}
+.food .pic .image{
+  background:url(http://csci571.com/hw/hw3/images/face.jpg) no-repeat 0px -13px;
+  background-size: 100%;
+  width: 110px;
+  height: 138px;
+  float: left;
+  margin: 29px 0px 23px 26px;
+}
+.food .div1{
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 10px;
+  font-weight: 70%;
+  color: rgb(69,51,140);
+  float: left;
+  margin: 31px 0px 0px 20px;
+}
+.food .div2{
+  float: left;
+  color: rgb(69,51,140);
+  font-size: 28px;
+  font-weight: lighter;
+  margin: 47px 0px 0px -45px;
+}
+.food .div3{
+  float: left;
+  color: rgb(69,51,140);
+  font-size: 36px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: -7px 0 0 18px;
+}
+.food .div4{
+  float: left;
+  width: 52px;
+  height:3px;
+  background-color: rgb(69,51,140);
+  margin: 52px 0 0 -147px;
+}
+.food .div5{
+  float: left;
+  color: rgb(69,51,140);
+  font-weight: lighter;
+  font-size: 14px;
+  margin: 42px 0 0 18px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.threecols{
+  color: white;
+  float: left;
+  margin: -152px 0 0 0;
+  font-family: 'Lato', sans-serif;
+}
+.threecols .projects{
+  background-color: rgb(96,151,182);
+  width: 253px;
+  height: 450px;
+  float: left;
+}
+.threecols .editorial{
+  background-color: rgb(67,43,119);
+  width: 252px;
+  height: 450px;
+  float: left;
+}
+.threecols .innovative{
+  background-color: rgb(146,110,189);
+  width: 256px;
+  height: 450px;
+  float: left;
+}
+#pro1{
+  font-size: 10px;
+  font-weight: lighter;
+  margin: 197px 0 0 34px;
+}
+#con1{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0 0 34px;
+}
+#pro2{
+  font-size: 10px;
+  font-weight: lighter;
+  margin: 197px 0 0 34px;
+}
+#con2{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0 0 34px;
+}
+#pro3{
+  font-size: 10px;
+  font-weight: lighter;
+  margin: 197px 0 0 34px;
+}
+#con3{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0 0 34px;
+}
+
+.group2{
+  background-color: rgb(67,43,119);
+  width: 761px;
+  height:400px;
+  margin: 615px auto 0 auto;
+  color: white;
+}
+.group2 .hello{
+  font-size: 10px;
+  font-weight: bold;
+  margin: 118px 0 0 93px;
+  float: left;
+  font-family: 'Raleway', sans-serif;
+}
+.group2 .unknow{
+  float: left;
+  width: 600px;
+  font-size: 28px;
+  font-weight: lighter;
+  margin: 16px 60px 0 98px;
+  line-height: 120%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.group3{
+  width: 761px;
+  height: 100px;
+  background-color: white;
+  color: rgb(67,43,119);
+  margin: 1010px auto 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+.group3 .left{
+  float: left;
+  width: 360px;
+  height: 360px;
+}
+.group3 .left .row1{
+  font-size: 9.5px;
+  font-weight: bolder;
+  margin: 83px 0 0 93px;
+}
+.group3 .left .row2{
+  font-size: 28px;
+  font-weight: 50%;
+  margin: 12px 0 0 98px;
+}
+.group3 .left .row3{
+  font-size: 9.3px;
+  font-weight: lighter;
+  margin: 5px 0 0 98px;
+}
+.group3 .left .row4{
+  font-size: 9.3px;
+  font-weight: lighter;
+  margin: 3px 0 0 98px;
+}
+.group3 .left .row5{
+  font-size: 9.3px;
+  font-weight: lighter;
+  margin: 83px 0 0 98px;
+}
+.group3 .right{
+  width: 286px;
+  float: left;
+  margin: 112px 0 0 15px;
+}
+.group3 .right input{
+  height: 18px;
+  border: 1px solid rgb(94,73,138);
+  width: 100%;
+  color: rgb(67,43,119);
+  font-size: 10px;
+  margin: 3px 0 0 0;
+  font-family: 'PT Sans', sans-serif;
+  margin-top: 3px;
+}
+.group3 .right .message{
+  color: rgb(67,43,119);
+  font-size: 10px;
+  font-family: 'PT Sans', sans-serif;
+  margin-top: 3px;
+  border: 1px solid rgb(94,73,138);
+  line-height: 250%;
+  width: 286px;
+  resize: none;
+}
+.group3 .right .submit{
+  color: white;
+  background-color: rgb(67,43,119);
+  width: 62px;
+  height: 23px;
+  font-size: 10px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: lighter;
+  margin: 4px 0 0 225px;
+}

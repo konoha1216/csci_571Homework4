@@ -1,0 +1,47 @@
+<div id="current" class="card mb-3" style="margin:20px auto 0; width: 100%;height: 380px; max-width: 780px; background-color: rgb(141, 200, 237); border: 1px solid black;">
+  <div id="currentCity">
+    {{currentCity}}
+  </div>
+  <div id="currentZone">
+    {{currentZone}}
+  </div>
+  <div id="currentTem">
+    <span>{{currentTem}}</span>
+    <img id="currentTemSign" src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png" style="width: 12px;">
+    <span id="currentF">F</span>
+  </div>
+  <div id="currentSummary">
+    {{currentSummary}}
+  </div>
+  <div id="currentIcons">
+      <div id="icon1" style="display: flex; justify-content: space-around;">
+          <div id="humidity1" *ngIf="currentHumidity != '0'">
+              <div class="img1" title="Humidity"><img id="humidity1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-16-512.png"></div>
+              <div id="humidity1num" class="text1">{{currentHumidity}}</div>
+          </div>
+          <div id="presure1" *ngIf="currentPressure != '0'">
+              <div class="img1" title="Pressure"><img id="presure1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-25-512.png"></div>
+              <div id="presure1num" class="text1">{{currentPressure}}</div>
+          </div>
+          <div id="windspeed1" *ngIf="currentWind != '0'">
+              <div class="img1" title="WindSpeed"><img id="windspeed1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-27-512.png"></div>
+              <div id="windspeed1num" class="text1">{{currentWind}}</div>
+          </div>
+          <div id="visibility1" *ngIf="currentVisibility != '0'">
+              <div class="img1" title="Visibility"><img id="visibility1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-30-512.png"></div>
+              <div id="visibility1num" class="text1">{{currentVisibility}}</div>
+          </div>
+          <div id="cloudcover1" *ngIf="currentCloud != '0'">
+              <div class="img1" title="CloudCover"><img id="cloudcover1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-28-512.png"></div>
+              <div id="cloudcover1num" class="text1">{{currentCloud}}</div>
+          </div>
+          <div id="ozone1" *ngIf="currentOzone != '0'">
+              <div class="img1" title="Ozone"><img id="ozone1img" src="https://cdn2.iconfinder.com/data/icons/weather-74/24/weather-24-512.png"></div>
+              <div id="ozone1num" class="text1">{{currentOzone}}</div>
+          </div>
+      </div>
+  </div>
+  <div id="currentSeal" *ngIf="sealData">
+    <img id="sealImg" [src]="sealUrl">
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div style="margin-top: 20px">
+</div>
+<div id="results-div" class="table-responsive" >
+    <div class="alert alert-warning" role="alert" *ngIf="getLocalStorageLength()==0">
+        No record.
+    </div>
+
+    <table class="table" style="color: black;" *ngIf="getLocalStorageLength()!=0">
+        <thead style="background-color: rgb(74, 135, 167);">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Favorites</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of favoriteList; index as i" [ngClass]="{light: i%2==0, deep: i%2!=0}">
+                <th scope="row">{{i+1}}</th>
+                <td>
+                    <img src="{{item.seal}}" style="width:40px; height: 40px;">
+                </td>
+                <td><a routerLink="/Current" (click)="favoriteSearch(item.city,item.state)" style="text-decoration: none;">{{item.city}}</a> </td>
+                <td>{{item.state}}</td>
+                <td>
+                    <button class="btn btn-light" (click)="removeFavorite(item.city)" style="color: orange;">
+                        <i class="material-icons algin-middle">delete</i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>konohaHW4</title>
+</head>
+<body>
+	<h3 style="text-align: center;margin-top: 100px;">Enter URL for largest manufacturers by production(2017) List JSON File
+	</h3>
+	<div style="text-align: center;margin: 20px;">
+		<input id="input"></input>
+	</div>
+	<div style="text-align: center;">
+		<button style="background-color: rgb(240,240,240);border-radius: 3px;" onclick="submit()">
+		Submit Query
+		</button>
+	</div>
+	<script>
+		// the main page and check the file
+		function submit(){
+			var file=document.getElementById("input");
+			if(file.value==""){
+				alert("please enter file's name.");
+			}
+			else{
+				var URL="./"+file.value;
+				this.URL=URL;
+				var xmlhttp= new XMLHttpRequest();
+				xmlhttp.open("GET",URL,false);
+				xmlhttp.send(); 
+				if(xmlhttp.status==404){    
+					alert("the file doesn't exist");
+				}
+				else{   
+					var json=JSON.parse(xmlhttp.responseText);
+					this.json=json;
+					console.log(json);
+					if(json.Mainline.Table.Row==null){
+						alert("no car manufacturers listed");
+					}
+					else{
+						table=window.open("", "_blank", "scrollbars=yes,resizable=1,modal=false");
+						generate();
+						table.document.write(webContent);
+						table.document.close();
+					}
+				}	
+			}
+		}		
+		// to write the table content
+		function generate(){
+			webContent="<html><head><title>Enter URL for largest manufacturers by production(2017) List JSON File</title></head><body><table border='2'><tr>";
+			var header=json.Mainline.Table.Header.Data;
+
+			for(var i=0; i<header.length; i++){
+				webContent+="<th>"+header[i]+"</th>";
+			}
+			webContent+="</tr>";
+			var row=json.Mainline.Table.Row;
+			var item="";
+
+			for(var i=0; i<row.length; i++){
+				item+="<tr>"+"<td>"+row[i].Rank+"</td><td>"+row[i].Group+"</td>";
+				if(row[i].Hubs.Hub.length==0){
+					item+="<td></td>";
+				}
+				else{
+					item+="<td><ul>";
+					for(var j=0; j<row[i].Hubs.Hub.length; j++){
+						if(j==0){
+							item+="<li><b>"+row[i].Hubs.Hub[j]+"</b></li>";
+						}
+						else{
+							item+="<li>"+row[i].Hubs.Hub[j]+"</li>";
+						}
+					}
+				item+="</ul></td>";
+				}
+			item+="<td>"+row[i].Vehicles+"</td><td><a href="+row[i].HomePage+">"+row[i].HomePage+"</a></td><td><img width=250px; height=250px; src='"+row[i].Logo+"'></td></tr>";	
+			}
+			webContent+=item+"</table>"+"</bo"+"dy>"+"</html>";
+		}
+	</script>
+</body>
+</html>
